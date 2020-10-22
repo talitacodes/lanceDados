@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
 
         botaoLancarDados.setOnClickListener {
             valorDado1.text = larcarDados().toString()
-            valorDado2.text = larcarDados().toString()
+
 
         }
     }
