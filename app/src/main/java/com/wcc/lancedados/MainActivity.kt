@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,10 +17,34 @@ class MainActivity : AppCompatActivity() {
         val dado2 = findViewById<ImageView>(R.id.dado2)
 
         botaoLancarDados.setOnClickListener {
-            val numero = larcarDados()
-            dado1.setImageResource(escolherImagem(numero))
-            dado2.setImageResource(escolherImagem(numero))
+            val numero = lancarDados()
+            dado1.setImageResource(lancarDados())
+            dado2.setImageResource(lancarDados())
         }
+    }
+
+    /*override fun onStop() {
+        super.onStop()
+        Toast.makeText( this, )
+    }*/
+
+    fun lancarDados():Int{
+        return recuperaFaceDado(gerarNumero())
+    }
+
+
+
+    fun recuperaFaceDado(valor:Int):Int{
+        return when(valor){
+            1-> R.drawable.dice_1
+            2-> R.drawable.dice_2
+            3-> R.drawable.dice_3
+            4-> R.drawable.dice_4
+            5-> R.drawable.dice_5
+            else -> R.drawable.dice_6
+        }
+
+
     }
 
     fun escolherImagem(numero:Int): Int{
@@ -34,7 +59,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun larcarDados(): Int {
+    fun gerarNumero(): Int {
         return (1..6).random();
     }
 }
