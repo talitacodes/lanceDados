@@ -27,24 +27,28 @@
         app:rippleColor="#FFEFEA" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/dado2"
         android:layout_width="186dp"
         android:layout_height="123dp"
-        app:layout_constraintBottom_toTopOf="@+id/lanceDadosBotao"
-        app:layout_constraintEnd_toStartOf="@+id/imageView2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.297"
-        app:srcCompat="@drawable/dice_1" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="186dp"
-        android:layout_height="123dp"
+        android:layout_marginEnd="32dp"
         app:layout_constraintBottom_toTopOf="@+id/lanceDadosBotao"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.296"
-        app:srcCompat="@drawable/dice_1" />
+        app:layout_constraintVertical_bias="0.308"
+        app:srcCompat="@drawable/dice_1"
+        android:contentDescription="TODO" />
+
+    <ImageView
+        android:id="@+id/dado1"
+        android:layout_width="186dp"
+        android:layout_height="123dp"
+        app:layout_constraintBottom_toTopOf="@+id/lanceDadosBotao"
+        app:layout_constraintEnd_toStartOf="@+id/dado2"
+        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.308"
+        app:srcCompat="@drawable/dice_1"
+        android:contentDescription="TODO" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
